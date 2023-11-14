@@ -1,45 +1,35 @@
-import { useEffect, useState } from "react";
+const { useState, useEffect } = require("react");
 
-
-function App() {
-  const [loading, setLoading] = useState(true);
-  const [coins, setCoins] =useState([]);
-  const [money, setMoney] =useState(0);
-  const [result, setResult] =useState(0);
+function App () {
+  const [loading, setLoading] =useState(true);
+  const [movies ,setMovies] = useState([]);
+  const getMovies = async () => {
+    const json = await (
+      await fetch(
+      `https://yts.mx/api/v2/list_movies.json?minimum_rating=8.9&sort_by=year`
+    )
+    ).json();
+      setMovies(json.data.movies);
+      setLoading(false);
+    };
   useEffect(() => {
-      fetch("https://api.coinpaprika.com/v1/tickers")
-      .then((response) => response.json())
-      .then((json) => {
-        setCoins(json)
-        setLoading(false);
-      });
-  }, []);
-  const inputHandle = (event) => setMoney(event.target.value);
-  const setChange = (event) => setResult(event.target.value);
-return (
-  <div>
-    <h1>The Coins!{loading ? "" : `(${coins.length})`}</h1>
-    <input onChange={inputHandle} value={money} placeholder="Type money" />
-    <p />
-    
-    {loading ? (
-        <strong>Loading...</strong>
-      ) : (
-        <select onChange={setChange}>
-          <option value="0"> Select your coin!</option>
-          {coins.map((coin, index) => (
-            <option key={index} value={coin.quotes.USD.price}>
-              {coin.name} ({coin.symbol}): ${coin.quotes.USD.price} USD
-            </option>
-          ))}
-        </select>
-      )}
-    
-      <div>
-        <h3>You get {result == 0 ?"0" :money / result} coins</h3>  
-      </div>  
-    </div>
-  );
+    getMovies();
+    },[]);
+  console.log(movies);
+  return <div>
+    {loading ? <h3>Loading.... </h3> : 
+    <div>{movies.map(movie => 
+    <div key={movie.id}>
+      <img src={movie.medium_cover_image} />
+      <h3>{movie.title}</h3>
+      <ul>
+        {movie.genres.map((g) => 
+        (<li key={(g)}>{g}</li>))}
+      </ul>
+      <p>{movie.summary}</p>
+      </div>
+    )}</div>}
+  </div>;
 }
 
 export default App;
