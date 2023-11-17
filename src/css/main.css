@@ -1,7 +1,7 @@
 .main {
     width: 1200px;
     margin: 0 auto;
-    background-color: rgba(202, 98, 98, 0.616)
+    background-color: rgba(68, 68, 68, 0.616)
 }
 
 .part {
@@ -10,7 +10,7 @@
     margin-left: 90px;
     margin-top: 15px;
     margin-bottom: 5px;
-    background-color: rgba(49, 49, 49, 0.445);
+    background-color: rgba(223, 223, 223, 0.445);
     display: flex;
 }
 
@@ -25,8 +25,8 @@
     margin-left: 10px;
 }
 
-.title Link {
-    color: rgb(229, 240, 250);
+.title h1 {
+    color: aliceblue;
 }
 
 .title p {

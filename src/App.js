@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from "./routes/Home";
-import Detail from "./components/Detail";
+import Detail from "./routes/Detail";
 
 const { useState, useEffect } = require("react");
 
