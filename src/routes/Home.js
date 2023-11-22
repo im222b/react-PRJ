@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Movie from "../components/movie";
-import "../css/main.css"
+
 
 function Home() {
     const [loading, setLoading] =useState(true);
@@ -8,7 +8,7 @@ function Home() {
     const getMovies = async () => {
         const json = await (
         await fetch(
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=8&sort_by=year`
+        `https://yts.mx/api/v2/list_movies.json?minimum_rating=7.5&sort_by=year`
     )
     ).json();
         setMovies(json.data.movies);
@@ -18,7 +18,13 @@ function Home() {
     getMovies();
     },[]);
     return (<div className="main">
-    {loading ? (<h3>Loading.... </h3>
+    {loading ? (<h1 style={{
+        width:"1200px",
+        height:"600px",
+        margin:"0 auto",
+        marginTop:"300px",
+        textAlign:"center"
+    }}>Loading.... </h1>
     ) : ( 
         <div >
             <div >

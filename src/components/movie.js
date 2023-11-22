@@ -2,6 +2,8 @@ import PropTypes from "prop-types";
 import {Link}from "react-router-dom";
 import "../css/main.css"
 
+
+
 function Movie({id,coverImg,title,summary,genres}) {
     return ( 
     <div className="part">
@@ -11,7 +13,7 @@ function Movie({id,coverImg,title,summary,genres}) {
         <div className="title">    
             <div className="imges">
                 <h1>
-                    <Link to={`/movie/${id}`}>{title}</Link>
+                    <Link to ={`/movie/${id}`}>{title}</Link>
                 </h1>
             </div>
             <div>

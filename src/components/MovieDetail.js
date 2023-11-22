@@ -1,35 +1,73 @@
-import { Link } from "react-router-dom";
+import {Link}from "react-router-dom";
+import "../css/detail.css";
 
-function movieDetail({ title, src, description, genres, url, rating }) 
+function MovieDetail({ title, src, description, genres, url, rating }) 
 {
     return (
-    <div>
-        <h1>
-            <a href={url} target="_blank">
-            {title}
-            </a>
-        </h1>
-        <img src={src} alt={title} />
-        <h4>description</h4>
-        <p /> {description}
-        <h4>Movie Rating: {rating}</h4>
-        <div>
-            <h4>genres</h4>
-            <ul>
-            {genres.map((genre, index) => (
-                <li key={index}>{genre}</li>
-            ))}
-            </ul>
+    <div idName="detailmain">
+        
+        <div className="detailpart">
+            
+            <div className="title">
+                <h1>
+                    <a href={url} target="_blank">
+                    {title}
+                    </a>
+                </h1>
+            </div>
+            
+            <div className="list">
+                <div className="img">
+                    <img src={src} alt={title} />
+                </div>
+                
+                <div className="detailList">
+                    
+                    <div className="Rating">
+                        <h4>Movie Rating: {rating}</h4>
+                        
+                        <div className="genres">
+                            
+                            <ul>
+                                {genres.map((genre, index) => (
+                                <li key={index}>{genre}</li>
+                                ))}
+                            </ul>
+                            
+                            <div className="description">
+                                
+                                <h4>Description</h4>
+                                <p /> {description}
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+
+                </div>
+            </div>
+            
+            
+                
+            
         </div>
+        
         <br />
         <hr />
-        <a href={url} target="_blank">
-            Go to the site&rarr;
-        </a>
-        <p />
-        <Link to="/home">Go to the Movie List &rarr;</Link>
+        
+        <div className="site">
+            <a href={url} target="_blank">
+                Go to the site&rarr;
+            </a>
+            <p />
+            <Link to="/">Go to the Movie List &rarr;</Link>
+        </div>
+        
     </div>
     );
 } 
 
-    export default movieDetail;    
+    export default MovieDetail;    
