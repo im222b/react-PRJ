@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-PRJ/static/css/main.69c8d5b4.css",
+    "main.js": "/react-PRJ/static/js/main.def9ed71.js",
+    "index.html": "/react-PRJ/index.html",
+    "main.69c8d5b4.css.map": "/react-PRJ/static/css/main.69c8d5b4.css.map",
+    "main.def9ed71.js.map": "/react-PRJ/static/js/main.def9ed71.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.69c8d5b4.css",
+    "static/js/main.def9ed71.js"
+  ]
+}
