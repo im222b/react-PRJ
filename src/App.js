@@ -12,7 +12,7 @@ const { useState, useEffect } = require("react");
 function App () {
   return <Router>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
         <Route path="/movie/:id" element={<Detail />} />  
         {/*id에 :넣지 않으면 그저 텍스트로 인식 아이디 값을 받지 못함*/}
     </Routes> 

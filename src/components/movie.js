@@ -7,16 +7,16 @@ import "../css/main.css"
 function Movie({id,coverImg,title,summary,genres}) {
     return ( 
     <div className="part">
-        <div>
+        <div className="imges">
             <img src={coverImg} alt={title} />
         </div>
         <div className="title">    
-            <div className="imges">
-                <h1>
+            <div >
+                <h2>
                     <Link to ={`/movie/${id}`}>{title}</Link>
-                </h1>
+                </h2>
             </div>
-            <div>
+            <div className="genre">
                     <ul>
                         {genres.map((g) => (
                         <li key={(g)}>{g}</li>
@@ -25,7 +25,7 @@ function Movie({id,coverImg,title,summary,genres}) {
             </div>
                 
             <div>
-                    <p>{summary}</p>
+                    <p>{summary.length > 235 ? `${summary.slice(0,335)}...`:summary}</p>
             </div>
         </div>
     </div>

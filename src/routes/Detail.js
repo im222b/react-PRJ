@@ -21,12 +21,18 @@ function Detail() {
     return (
         <div>
         {loading ? (
-            <h1>Loading...</h1>
+            <h1 style={{
+            width:"1200px",
+            height:"600px",
+            margin:"0 auto",
+            marginTop:"300px",
+            textAlign:"center"
+        }}>Loading.... </h1>
         ) : (
             <div>
             <MovieDetail
                 title={movie.title_long}
-                src={movie.medium_cover_image}
+                src={movie.large_cover_image}
                 description={movie.description_full}
                 genres={movie.genres}
                 url={movie.url}

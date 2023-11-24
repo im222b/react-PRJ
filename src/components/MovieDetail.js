@@ -17,13 +17,13 @@ function MovieDetail({ title, src, description, genres, url, rating })
             </div>
             
             <div className="list">
-                <div className="img">
+                <div className="imges">
                     <img src={src} alt={title} />
                 </div>
                 
                 <div className="detailList">
                     
-                    <div className="Rating">
+                    <div className="rating">
                         <h4>Movie Rating: {rating}</h4>
                         
                         <div className="genres">
@@ -33,13 +33,16 @@ function MovieDetail({ title, src, description, genres, url, rating })
                                 <li key={index}>{genre}</li>
                                 ))}
                             </ul>
-                            
-                            <div className="description">
-                                
-                                <h4>Description</h4>
-                                <p /> {description}
+                            <div>
+                            <h4>Description</h4>
+                                <div className="description">
+                                    
+                                    
+                                    <p /> {description}
 
+                                </div>
                             </div>
+                            
                         </div>
                     </div>
                     

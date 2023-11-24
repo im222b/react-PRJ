@@ -1,15 +1,16 @@
 #detailmain {
-    width: 1200px;
-    
+    width: 100%;
     margin: 0 auto;
 }
 
 .detailpart {
     background-color: rgba(241, 241, 241, 0.596);
+    margin: 20 auto;
     border-radius: 5px;
-    width: 1200px;
-    margin: 0 auto;
-    
+    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+    max-height: 800px;
+    max-width: 1200px;
 }
 
 
@@ -22,25 +23,35 @@
     display: flex;
 }
 
-.list img {
+.imges img {
     
-    height: 650px;
-    width: 450px;
+    height: 100%;
+    width: 100%;
+    margin : 0px 10px 0px 10px;
     
+    border-radius: 5px;
+    max-width: 350px;
+    max-height: 450px;
+
 }
 
 .detailList {
     margin-left: 15px;
 }
-
 .description{
-    padding: 10px 10px 10px 10px;
+    margin: 0 0 20px 20px;
     width: 650px;
-    height: ;
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
 }
-~
+
+
+
 .site a{
-    color: white;
+    color: rgb(7, 7, 7);
     text-decoration: none;
-    margin: 0 auto;
+    float: left;
+    margin-right: 60px;
 }
