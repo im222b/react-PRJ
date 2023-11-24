@@ -5,7 +5,9 @@ import "../css/main.css"
 
 
 function Movie({id,coverImg,title,summary,genres}) {
-    return ( 
+    return (
+<div> 
+    
     <div className="part">
         <div className="imges">
             <img src={coverImg} alt={title} />
@@ -25,10 +27,12 @@ function Movie({id,coverImg,title,summary,genres}) {
             </div>
                 
             <div>
-                    <p>{summary.length > 235 ? `${summary.slice(0,335)}...`:summary}</p>
+                    <p>{summary.length > 235 ? `${summary.slice(0,235)}...`:summary}</p>
             </div>
         </div>
     </div>
+    
+</div>
 )}
 
 Movie.propTypes = {

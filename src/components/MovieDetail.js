@@ -17,7 +17,7 @@ function MovieDetail({ title, src, description, genres, url, rating })
             </div>
             
             <div className="list">
-                <div className="imges">
+                <div className="imge">
                     <img src={src} alt={title} />
                 </div>
                 

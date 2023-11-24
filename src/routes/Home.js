@@ -27,6 +27,8 @@ function Home() {
     }}>Loading.... </h1>
     ) : ( 
         <div >
+
+            
             <div >
                 {movies.map((movie) => (
                 <Movie 
@@ -39,6 +41,7 @@ function Home() {
                 />  
                 ))}
             </div>
+            
         </div>
         )}
     </div>
