@@ -66,7 +66,7 @@ function MovieDetail({ title, src, description, genres, url, rating })
                 Go to the site&rarr;
             </a>
             <p />
-            <Link to="/">Go to the Movie List &rarr;</Link>
+            <Link to="/react-PRJ">Go to the Movie List &rarr;</Link>
         </div>
         
     </div>

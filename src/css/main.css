@@ -7,21 +7,22 @@
 .main {
     width: 100%;
     margin: 0 auto;
-    display: flex;
     float: right;
+    flex-direction: row
 }
 
 .part {
     width: 680px;
     height: 350px;
+    color: rgb(90, 88, 84);
     margin-left: 50px;
     margin-top: 15px;
     margin-bottom: 25px;
-    background-color: rgba(201, 201, 201, 0.151);
+    background-color: rgba(247, 247, 247, 0.151);
     display: flex;
     float: left;
     border-radius: 15px;
-    box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    box-shadow: 0 30px 60px -12px rgba(59, 59, 92, 0.25),
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
     
 }
@@ -30,17 +31,15 @@
     object-fit: cover;
     margin: 20px 15px 20px 15px;
     width: 230px;
-    border-radius: 15px;
+    
 }
 
 .imges img {
+    
     max-width: 230px;
     max-height: 300px;
     width: 100%;
-    
-    
-    
-    
+    border-radius: 15px;
 }
 
 .title {

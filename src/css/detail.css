@@ -1,11 +1,13 @@
 #detailmain {
-    
     margin: 0 auto;
+
 }
+
+
 
 .detailpart {
     background-color: rgba(241, 241, 241, 0.596);
-    margin: 20 auto;
+    margin-left: 35px;
     border-radius: 5px;
     box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
@@ -24,26 +26,26 @@
 }
 .imge {
     height: 100%;
-    width: 100%;
+    margin : 10px 10px 10px 20px;
 }
 
 .imge img {
     height: 100%;
     width: 100%;
-    margin : 0px 10px 0px 10px;
     border-radius: 5px;
     max-width: 350px;
     max-height: 450px;
+    min-width: 230px;
+    min-height: 350px; 
 
 }
 
 .detailList {
-    margin-left: 15px;
-    width: 660px;
-    height: 260px;
+    margin-left: 35px;
+    
 }
 .description{
-    margin: 0 0 20px 20px;
+    margin: 0 20 20px 20px;
     width: 650px;
     height: 250px;
     overflow-x: hidden;
@@ -51,7 +53,9 @@
     
 }
 
-
+.site {
+    margin: 20px 0 50px 0;
+}
 
 .site a{
     color: rgb(7, 7, 7);
